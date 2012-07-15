@@ -10,7 +10,7 @@
  */
 
 // The used PEAR Console_Getargs class isn't PHP5 compliant, so hide
-// hide the depreciated error messages.
+// the depreciated error messages.
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 include 'Console/Getargs.php';
@@ -48,7 +48,7 @@ if (PEAR::isError($args)) {
 
   if ($args->getCode() === CONSOLE_GETARGS_ERROR_USER) {
 
-  echo Console_Getargs::getHelp($config, NULL, $args->getMessage());
+    echo Console_Getargs::getHelp($config, NULL, $args->getMessage());
 
   } else if ($args->getCode() === CONSOLE_GETARGS_HELP) {
 
